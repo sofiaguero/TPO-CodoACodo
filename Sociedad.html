@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Stylefind.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sociedad</title>
+	<link rel="icon" href="img/icon.jpeg">
+</head>
+<body>
+	<div class="menuPrincipal">
+		<header class="heared">
+		<nav> 
+			
+			<menu>
+				<table>
+				<tr> 
+					<td><h1><img src="img/Logo.png"></h1></td>
+	
+					<td><button type="button" class="btn"><a href="Index.htm"> INICIO </a></button></td>
+	
+					<td><button type="button" class="btn"><a href="Mascotas.html"> AMIGOS </a></button></td>
+			
+					<td><button type="button" class="btn"><a href="Sociedad.html"> ADOPTAR </a></button></td>
+				
+					<td><button type="button" class="btn"><a href="Contacto.html"> CONTACTO </a></button></td>
+					
+					<td><button class="btn"><a href="pregf.html">¿QUIENES SOMOS?</a></button></td>
+			</tr></table></menu>
+		</nav>
+		</header>
+		</div>
+		<main><div class="adoptar">
+		<h2>Formulario de adopcion</h2>
+		<form action="show_data.html" target="_blank" id="formulario">
+			<label for="firstname">Nombre/s: </label><input size="30" type="text" name="firstname"
+				placeholder="Ingrese su nombre aqui..." id="firstname"> <br><br>
+			<label for="lastname">Apellido/s: </label><input size="30" type="text" name="lastname"
+				placeholder="Ingrese su apellido aqui..." id="lastname"> <br><br>
+			<label for="street">Direccion: </label><input type="text" name="address"
+				placeholder="Ingrese su dirección aqui..." id="address"> <br><br>
+			<label for="number">Numero: </label><input type="number" name="number" placeholder="Ingrese el numero.." id="number">
+			<br><br>
+			<label for="city">Ciudad: </label><input type="text" name="city" value="Ingrese su ciudad aqui..."> <br><br>
+			<label for="zipcode">Código Postal: </label><input type="text" name="zipcode"
+				placeholder="Ingrese su codigo postal aqui..."> <br> <br>
+			<label for="telefono">Telefono: </label><input type="tel" name="telefono"
+				placeholder="ingrese su telefono aqui ...." id="telefono"> <br><br>
+			<label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="birthdate"> <br><br>
+			<label for="mail">Mail: </label><input type="email" name="mail"> <br><br>
+	
+			<p>Género
+				<input type="radio" name="gender" value="hombre" checked>Hombre
+				<input type="radio" name="gender" value="Mujer">Mujer
+				<input type="radio" name="gender" value="Otro"> Otro
+			</p>
+			<p> Tiene Usted: 
+				<input type="checkbox" name="mascotas" value="PERROS"> Perros
+				<input type="checkbox" name="mascotas" value="GATOS"> Gatos
+				<input type="checkbox" name="mascotas" value="OTRA"> Otra Mascota
+				<input type="checkbox" name="mascotas" value="NINGUNO"> Ninguno
+			</p>
+	
+	
+			<label for="comentarios">Comentarios:</label> <textarea name="comentarios" rows="10" cols="30"></textarea>
+			<br>
+			<input type="submit" value="Enviar"><br>
+		</form>
+		<script>
+			//Validación de un formulario con Javascript
+			document.addEventListener("DOMContentLoaded", function () {
+				document.getElementById("formulario").addEventListener('submit', validarFormulario);
+			});
+	
+			function validarFormulario(evento) {
+				evento.preventDefault();
+				var nombre = document.getElementById('firstname').value;
+				if (nombre.length == 0) {
+					alert('No ha escrito su nombre');
+					return;
+				}
+				var apellido = document.getElementById('lastname').value;
+				if (apellido.length == 0) {
+					alert('No ha escrito su apellido');
+					return;
+				}
+				var apellido = document.getElementById('address').value;
+				if (apellido.length == 0) {
+					alert('No ha escrito su apellido');
+					return;
+				}
+				var apellido = document.getElementById('number').value;
+				if (apellido.length == 0) {
+					alert('No ha escrito su apellido');
+					return;
+				}
+				var telefono = document.getElementById('telefono').value;
+				if (telefono.length == 0) {
+					alert('No ha ingresado su telefono');
+					return;
+				}
+				alert("Muchas gracias por enviar el formulario. Pronto nos comunicaremos con usted.");
+				this.submit();
+			}
+		</script>
+		<p>Luego de llenar el formulario nos contactaremos con ud. para seleccionar su nuevo amig@.</p><br><br></div>
+	</main>
+	<br><br>
+	<footer class="footer">
+		<div class="redes">
+			<br>
+		<p>Seamos responsables con nuestras mascotas</p>
+		<p>Para mas información sonbre adopcion <a href="Contacto.html">contactanos</a></p>
+		<br>
+		</div>
+	</footer<>
+</body>
+</html>
